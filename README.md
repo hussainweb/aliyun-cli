@@ -1,6 +1,12 @@
 # Aliyun CLI on Docker
 This is the source for the [Aliyun CLI Docker image](https://hub.docker.com/r/hussainweb/aliyun-cli) (no entrypoint so that it may be used in a CI like Jenkins)
 
+## Tags and respective Dockerfile links
+
+- [3.0.15](https://github.com/hussainweb/aliyun-cli-docker/blob/3.0.15/Dockerfile)
+- [latest](https://github.com/hussainweb/aliyun-cli-docker/blob/master/Dockerfile)
+
+
 ## Usage
 
 Just run it with Docker as usual:
