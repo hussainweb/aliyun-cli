@@ -14,8 +14,6 @@ RUN curl -L -o aliyun-cli.tar.gz https://github.com/aliyun/aliyun-cli/archive/v$
 # git clone --branch v${ALIYUNCLI_VERSION} https://github.com/aliyun/aliyun-cli.git 
 
 WORKDIR /go/src/github.com/aliyun/aliyun-cli
-RUN make deps 
-RUN make testdeps 
 RUN make build
 
 FROM alpine:3.10
