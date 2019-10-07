@@ -8,7 +8,7 @@ WORKDIR /go/src/github.com/aliyun
 
 RUN apk add --update make git curl
 RUN curl -L -o aliyun-cli.tar.gz https://github.com/aliyun/aliyun-cli/archive/v${ALIYUNCLI_VERSION}.tar.gz \
-    && tar zxvf aliyun-cli.tar.gz \
+    && tar zxf aliyun-cli.tar.gz \
     && mv aliyun-cli-${ALIYUNCLI_VERSION} aliyun-cli
 # Instead of the above, we can also:
 # git clone --branch v${ALIYUNCLI_VERSION} https://github.com/aliyun/aliyun-cli.git 
