@@ -13,6 +13,13 @@ RUN curl -L -o aliyun-cli.tar.gz https://github.com/aliyun/aliyun-cli/archive/v$
 # Instead of the above, we can also:
 # git clone --branch v${ALIYUNCLI_VERSION} https://github.com/aliyun/aliyun-cli.git 
 
+# The 'go get' commands work differently in modern Go versions,
+# which breaks the behaviour expected by 'make build'.
+# More details here: https://golang.org/cmd/go/#hdr-Module_aware_go_get
+# To workaround this problem, we are going to clone the repository
+# ourselves so that the files are available to 'go-bindata'.
+RUN git clone https://github.com/aliyun/aliyun-openapi-meta
+
 WORKDIR /go/src/github.com/aliyun/aliyun-cli
 RUN make build
 
