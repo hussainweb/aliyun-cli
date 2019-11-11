@@ -1,5 +1,5 @@
 FROM golang:alpine as builder
-ENV ALIYUNCLI_VERSION 3.0.27
+ENV ALIYUNCLI_VERSION 3.0.29
 
 # We should clone/download the Aliyun CLI in this directory
 # as that is what the build scripts expect (relative paths
