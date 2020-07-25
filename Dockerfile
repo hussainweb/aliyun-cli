@@ -23,5 +23,5 @@ RUN git clone https://github.com/aliyun/aliyun-openapi-meta
 WORKDIR /go/src/github.com/aliyun/aliyun-cli
 RUN make build
 
-FROM alpine:3.10
+FROM alpine:3.12
 COPY --from=builder /go/src/github.com/aliyun/aliyun-cli/out/aliyun /usr/local/bin/aliyun
